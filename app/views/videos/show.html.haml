@@ -1,0 +1,24 @@
+- title "Video"
+
+%p
+  %strong Name:
+  = @video.name
+%p
+  %strong Description:
+  = @video.description
+%p
+  %strong Free:
+  = @video.free
+%p
+  %strong Movie Name:
+  = @video.movie_file_name
+%p
+  %strong Movie Size:
+  = @video.movie_file_size
+
+%p
+  = link_to "Edit", edit_video_path(@video)
+  |
+  = link_to "Destroy", @video, :confirm => 'Are you sure?', :method => :delete
+  |
+  = link_to "View All", videos_path
