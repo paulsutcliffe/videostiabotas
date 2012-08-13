@@ -1,8 +1,7 @@
-- title "Edit Video"
+%h1 Editando video
 
 = render 'form'
 
-%p
-  = link_to "Show", @video
-  |
-  = link_to "View All", videos_path
+= link_to 'Ver', @video
+\|
+= link_to 'Regresar', videos_path

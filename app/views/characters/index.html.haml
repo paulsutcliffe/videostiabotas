@@ -1,0 +1,19 @@
+%h1 Listando personajes
+
+%table
+  %tr
+    %th Nombre
+    %th
+    %th
+    %th
+
+  - @characters.each do |character|
+    %tr
+      %td= character.name
+      %td= link_to 'Ver', character
+      %td= link_to 'Editar', edit_character_path(character)
+      %td= link_to 'Eliminar', character, :confirm => '¿Estás seguro?', :method => :delete
+
+%br
+
+= link_to 'Nuevo Personaje', new_character_path

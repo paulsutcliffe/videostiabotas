@@ -1,7 +1,15 @@
 Videostiabotas::Application.routes.draw do
-  devise_for :users
-
   resources :videos
+
+  resources :characters do
+    resources :videos
+  end
+
+  resources :categories do
+    resources :videos
+  end
+
+  devise_for :users
 
   root :to => "videos#index"
 end

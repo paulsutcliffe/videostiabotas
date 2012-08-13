@@ -1,0 +1,19 @@
+%h1 Listando categorías
+
+%table
+  %tr
+    %th Nombre
+    %th
+    %th
+    %th
+
+  - @categories.each do |category|
+    %tr
+      %td= category.name
+      %td= link_to 'Ver', category
+      %td= link_to 'Editar', edit_category_path(category)
+      %td= link_to 'Eliminar', category, :confirm => '¿Estás Seguro?', :method => :delete
+
+%br
+
+= link_to 'Nueva Categoríaa', new_category_path

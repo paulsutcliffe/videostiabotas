@@ -10,7 +10,25 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120811022218) do
+ActiveRecord::Schema.define(:version => 20120811222230) do
+
+  create_table "categories", :force => true do |t|
+    t.string   "name"
+    t.string   "slug"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "categories", ["slug"], :name => "index_categories_on_slug", :unique => true
+
+  create_table "characters", :force => true do |t|
+    t.string   "name"
+    t.string   "slug"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "characters", ["slug"], :name => "index_characters_on_slug", :unique => true
 
   create_table "users", :force => true do |t|
     t.string   "email",                                 :default => "", :null => false
@@ -31,9 +49,9 @@ ActiveRecord::Schema.define(:version => 20120811022218) do
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
 
   create_table "videos", :force => true do |t|
-    t.string   "name"
-    t.text     "description"
-    t.boolean  "free"
+    t.string   "title"
+    t.integer  "category_id"
+    t.integer  "character_id"
     t.string   "slug"
     t.datetime "created_at"
     t.datetime "updated_at"

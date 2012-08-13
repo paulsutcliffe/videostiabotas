@@ -1,20 +1,22 @@
-= form_for (@video, :html => { :multipart => true }) do |f|
-  = f.error_messages
-  %p
-    = f.label :name
-    %br
-    = f.text_field :name
-  %p
-    = f.label :description
-    %br
-    = f.text_area :description
-  %p
-    = f.label :movie
-    %br
+= form_for(@video, :html => { :multipart => true }) do |f|
+  -if @video.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@video.errors.count, "error")} impidieron guardar este video:"
+      %ul
+        - @video.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :title, "Título"
+    = f.text_field :title
+  .field
+    = f.label :movie, "Video"
     = f.file_field :movie
-  %p
-    = f.label :free
-    %br
-    = f.check_box :free
-  %p
-    = f.submit
+  .field
+    = f.label :category_id, "Categoría"
+    = f.select(:category_id, @categories.collect {|p| [p.name, p.id]})
+  .field
+    = f.label :character_id, "Personaje"
+    = f.select(:character_id, @characters.collect {|p| [p.name, p.id]})
+  .actions
+    = f.submit 'Guardar'

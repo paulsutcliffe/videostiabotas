@@ -1,0 +1,7 @@
+%p
+  %b Nombre:
+  = @character.name
+
+= link_to 'Editar', edit_character_path(@character)
+\|
+= link_to 'Regresar', characters_path

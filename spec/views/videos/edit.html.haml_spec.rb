@@ -3,9 +3,9 @@ require 'spec_helper'
 describe "videos/edit" do
   before(:each) do
     @video = assign(:video, stub_model(Video,
-      :name => "MyString",
-      :description => "MyText",
-      :free => false
+      :title => "MyString",
+      :category_id => 1,
+      :character_id => 1
     ))
   end
 
@@ -14,9 +14,9 @@ describe "videos/edit" do
 
     # Run the generator again with the --webrat flag if you want to use webrat matchers
     assert_select "form", :action => videos_path(@video), :method => "post" do
-      assert_select "input#video_name", :name => "video[name]"
-      assert_select "textarea#video_description", :name => "video[description]"
-      assert_select "input#video_free", :name => "video[free]"
+      assert_select "input#video_title", :name => "video[title]"
+      assert_select "input#video_category_id", :name => "video[category_id]"
+      assert_select "input#video_character_id", :name => "video[character_id]"
     end
   end
 end
