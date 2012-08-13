@@ -1,7 +1,6 @@
 class VideosController < InheritedResources::Base
   before_filter :authenticate_user!
-  #before_filter :find_character
-  #before_filter :find_category
+  respond_to :html, :xml
 
   def new
     @video = Video.new
@@ -17,8 +16,8 @@ class VideosController < InheritedResources::Base
 
   def show
     @video = Video.find_by_id(params[:id])
-    @category = Category.find_by_id(@video.category_id).name
-    @character = Character.find_by_id(@video.character_id).name
+    @category = Category.find_by_id(@video.category_id.to_i).name
+    @character = Character.find_by_id(@video.character_id.to_i).name
   end
 
   def create

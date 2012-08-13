@@ -8,15 +8,13 @@
     %th Personaje
     %th
     %th
-    %th
 
   - @videos.each do |video|
     %tr
-      %td= video.title
+      %td= link_to video.title, video
       %td= video.movie_file_name
-      %td= video.category_id
-      %td= video.character_id
-      %td= link_to 'Ver', video
+      %td= Category.find_by_id(video.category_id.to_i).name
+      %td= Character.find_by_id(video.character_id.to_i).name
       %td= link_to 'Editar', edit_video_path(video)
       %td= link_to 'Eliminar', video, :confirm => '¿Estás seguro?', :method => :delete
 

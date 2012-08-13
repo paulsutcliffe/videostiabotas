@@ -1,5 +1,6 @@
 class CharactersController < InheritedResources::Base
   before_filter :authenticate_user!
+  respond_to :html, :xml
 
   def create
     create!(:notice => "Personaje guardado correctamente")

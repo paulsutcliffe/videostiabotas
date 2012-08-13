@@ -1,6 +1,9 @@
 %p
   %b Nombre:
   = @character.name
+%p
+  %b Imagen:
+  = image_tag(@character.image(:medium))
 
 = link_to 'Editar', edit_character_path(@character)
 \|

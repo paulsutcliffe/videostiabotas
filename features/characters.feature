@@ -6,9 +6,11 @@ Feature: Manage Characters
     When I visit the "/characters" page
     And I follow "Nuevo Personaje"
     And I fill in "Nombre" with "El Calamar"
+    And I attach the file "picture.jpg" to "Imagen"
     And I press "Guardar"
     Then I should see "Personaje guardado correctamente"
     And I should see "El Calamar"
+    And I should see the image "picture.jpg"
 
   Scenario: Editing a character
     Given a "Pomodoro" character exists

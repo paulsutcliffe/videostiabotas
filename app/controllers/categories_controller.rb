@@ -1,5 +1,6 @@
 class CategoriesController < InheritedResources::Base
   before_filter :authenticate_user!
+  respond_to :html, :xml
 
   def create
     create!(:notice => "Categoría guardada correctamente")
