@@ -28,3 +28,11 @@ end
 Then /^I should see "(.*?)"$/ do |result|
   page.should have_content(result)
 end
+
+Given /^a "(.*?)" category exists$/ do |category|
+  Category.new(:name => category).save!
+end
+
+Then /^I should not see "(.*?)"$/ do |result|
+  page.should have_no_content(result)
+end

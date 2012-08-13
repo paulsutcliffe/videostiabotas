@@ -9,6 +9,12 @@ class VideosController < InheritedResources::Base
     @categories = Category.all
   end
 
+  def edit
+    @video = Video.find_by_id(params[:id])
+    @characters = Character.all
+    @categories = Category.all
+  end
+
   def show
     @video = Video.find_by_id(params[:id])
     @category = Category.find_by_id(@video.category_id).name
@@ -17,5 +23,13 @@ class VideosController < InheritedResources::Base
 
   def create
     create!(:notice => "Video guardado correctamente" )
+  end
+
+  def update
+    update!(:notice => "Video actualizado correctamente")
+  end
+
+  def destroy
+    destroy!(:notice => "Video eliminado correctamente")
   end
 end

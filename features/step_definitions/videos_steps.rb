@@ -11,3 +11,7 @@ Given /^already exists a few categories and characters$/ do
   Category.create([{ :name => 'Cuento' }, { :name => 'Canción' }, { :name => 'Karaoke' }])
   Character.create([{ :name => 'Orlando' }, { :name => 'Omar' }, { :name => 'Pomodoro' }])
 end
+
+Given /^a "(.*?)" video exists$/ do |title|
+  Video.new(:title => title).save!
+end

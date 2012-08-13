@@ -1,9 +1,27 @@
 Feature: Manage Characters
+  Background:
+    Given I am a new authenticated user
+
   Scenario: Adding a new character
-  Given I am a new authenticated user
-  When I visit the "/characters" page
-  And I follow "Nuevo Personaje"
-  And I fill in "Nombre" with "El Calamar"
-  And I press "Guardar"
-  Then I should see "Personaje guardado correctamente"
-  And I should see "El Calamar"
+    When I visit the "/characters" page
+    And I follow "Nuevo Personaje"
+    And I fill in "Nombre" with "El Calamar"
+    And I press "Guardar"
+    Then I should see "Personaje guardado correctamente"
+    And I should see "El Calamar"
+
+  Scenario: Editing a character
+    Given a "Pomodoro" character exists
+    When I visit the "/characters" page
+    And I follow "Editar"
+    And I fill in "Nombre" with "Omar"
+    And I press "Guardar"
+    Then I should see "Personaje actualizado correctamente"
+    And I should see "Omar"
+
+  Scenario: Deleting a character
+    Given a "Pomodoro" character exists
+    When I visit the "/characters" page
+    And I follow "Eliminar"
+    Then I should see "Personaje eliminado correctamente"
+    And I should not see "Pomodoro"
