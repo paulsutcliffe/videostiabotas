@@ -13,5 +13,5 @@ Given /^already exists a few categories and characters$/ do
 end
 
 Given /^a "(.*?)" video exists$/ do |title|
-  Video.new(:title => title).save!
+  Video.new(:title => title, :character_id => 1, :category_id => 1).save!
 end
