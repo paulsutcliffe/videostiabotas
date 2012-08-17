@@ -1,7 +1,8 @@
-%h1 Editando video
-
-= render 'form'
-
-= link_to 'Ver', @video
-\|
-= link_to 'Regresar', videos_path
+#content.container
+  .block.width-540.centered
+    %h6.title Editando video
+    .inner
+      = render 'form'
+      .block-footer
+        = link_to 'Ver', @video, :class => 'link first'
+        = link_to 'Regresar', videos_path, :class => 'link last'

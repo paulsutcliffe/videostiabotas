@@ -1,7 +1,10 @@
 class VideosController < InheritedResources::Base
   before_filter :authenticate_user!
   respond_to :html, :xml
-
+  
+  def index
+    @videos = Video.paginate(:page => params[:page], :per_page => 5)
+  end
   def new
     @video = Video.new
     @characters = Character.all

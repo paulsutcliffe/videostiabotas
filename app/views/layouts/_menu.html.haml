@@ -1,0 +1,15 @@
+%nav.main
+  .container
+    %ul
+      %li
+        = link_to_unless_current 'Categor’as', categories_path do
+          %span Categor’as
+      %li
+        = link_to_unless_current 'Personajes', characters_path do
+          %span Personajes
+      %li
+        = link_to_unless_current 'Videos', videos_path do
+          %span Videos
+    %ul#admin-menu
+      %li
+        %a Cerrar Sesi—n

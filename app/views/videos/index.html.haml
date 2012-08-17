@@ -1,23 +1,22 @@
-%h1 Listando videos
-
-%table
-  %tr
-    %th Título
-    %th Link
-    %th Categoría
-    %th Personaje
-    %th
-    %th
-
-  - @videos.each do |video|
-    %tr
-      %td= link_to video.title, video
-      %td= video.movie_file_name
-      %td= video.category_id
-      %td= video.character_id
-      %td= link_to 'Editar', edit_video_path(video)
-      %td= link_to 'Eliminar', video, :confirm => '¿Estás seguro?', :method => :delete
-
-%br
-
-= link_to 'Nuevo Video', new_video_path
+#content.container
+  .block.width-1020.behavior-table
+    %h6.title Videos
+    .table-head
+      %ul
+        %li.titulo Título
+        %li.archivo Archivo
+        %li.categoria Categoría
+        %li.personaje Personaje
+      .table-body
+        - @videos.each do |video|
+          %ul
+            %li.titulo= link_to video.title, video
+            %li.archivo= video.movie_file_name
+            %li.categoria= video.category_id
+            %li.personaje= video.character_id
+            %li.links
+              = link_to 'Editar', edit_video_path(video), :class => 'btn edit'
+              = link_to 'Eliminar', video, :confirm => '¿Estás seguro?', :method => :delete, :class => 'btn destroy'
+      .table-footer
+        = link_to 'Nuevo Video', new_video_path, :class => 'link'
+        = will_paginate @videos

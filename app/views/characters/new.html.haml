@@ -1,5 +1,8 @@
-%h1 Nuevo personaje
+#content.container
+  .block.width-540.centered
+    %h6.title Nuevo personaje
+    .inner
+      = render 'form'
+      .block-footer
+        = link_to 'Regresar', characters_path, :class => 'link'
 
-= render 'form'
-
-= link_to 'Regresar', characters_path

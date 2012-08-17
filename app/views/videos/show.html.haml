@@ -1,16 +1,22 @@
-%p
-  %b Título:
-  = @video.title
-%p
-  %b Video Link:
-  = @video.movie_file_name
-%p
-  %b Categoría:
-  = @category
-%p
-  %b Personaje:
-  = @character
+#content.container
+  .block.width-540.centered
+    %h6.title Video
+    .inner
+      %p
+        Título:
+        = @video.title
+      %p
+        Video Link:
+        = @video.movie_file_name
+      %p
+        Categoría:
+        = @category
+      %p
+        Personaje:
+        = @character
+      .block-footer
+        = link_to 'Editar', edit_video_path(@video), :class => 'link first'
+        = link_to 'Regresar', videos_path, :class => 'link last'
 
-= link_to 'Editar', edit_video_path(@video)
-\|
-= link_to 'Regresar', videos_path
+
+

@@ -1,7 +1,12 @@
-%p
-  %b Nombre:
-  = @category.name
+#content.container
+  .block.width-540.centered
+    %h6.title Categor’a
+    .inner
+      %p
+        Categor’a 
+        = @category.name
+      .block-footer
+        = link_to 'Editar', edit_category_path(@category), :class => 'link first'
+        = link_to 'Regresar', categories_path, :class => 'link last'
 
-= link_to 'Editar', edit_category_path(@category)
-\|
-= link_to 'Regresar', categories_path
+
