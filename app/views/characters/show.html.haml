@@ -1,10 +1,15 @@
-%p
-  %b Nombre:
-  = @character.name
-%p
-  %b Imagen:
-  = image_tag(@character.image(:medium))
+#content.container
+  .block.width-540.centered
+    %h6.title Video
+    .inner
+      %p
+        Nombre:
+        = @character.name
+      = image_tag(@character.image(:medium))
 
-= link_to 'Editar', edit_character_path(@character)
-\|
-= link_to 'Regresar', characters_path
+      .block-footer
+        = link_to 'Editar', edit_character_path(@character), :class => 'link first'
+        = link_to 'Regresar', characters_path, :class => 'link last'
+
+
+

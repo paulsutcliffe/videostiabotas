@@ -261,9 +261,12 @@ CONTROLLERS
 .show .block.width-540 .inner p{padding:0 60px}
 .show .block.width-540 .inner img{display:block; margin:0 auto}
 
+
+#characters.show .block.width-540{background:url(../images/backgrounds/bg-block-2.png) no-repeat scroll 0 10px}
 #characters.new .block.width-540,
-#characters.show .block.width-540{background:url(../images/backgrounds/bg-block-3.png) no-repeat scroll 0 10px}
+#characters.edit .block.width-540{background:url(../images/backgrounds/bg-block-3.png) no-repeat scroll 0 10px}
 #categories.new .block.width-540,
+#categories.edit .block.width-540,
 #categories.show .block.width-540{background-image:url(../images/backgrounds/bg-block-4.png)}
 #categories.new .block.width-540 .actions input{margin-bottom:0}
 
