@@ -10,6 +10,7 @@
       %li
         = link_to_unless_current 'Videos', videos_path do
           %span Videos
-    %ul#admin-menu
-      %li
-        %a Cerrar Sesi—n
+    = if current_user
+      %ul#admin-menu
+        %li
+          = link_to 'Cerrar Sesi—n', destroy_user_session_path, :method => :delete

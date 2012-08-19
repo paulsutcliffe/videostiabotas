@@ -230,6 +230,23 @@ background:url(../images/backgrounds/btn-global.png) no-repeat -1px -53px}
 
 
 
+#flash_notice{width:520px;  margin:0 auto; padding:15px; font-size:1.5em; background:white; margin-bottom:10px;
+-moz-border-radius:8px; -webkit-border-radius:8px; -o-border-radius:8px; -khtml-border-radius:8px;
+border-radius:8px; color:#ff0000}
+#devise-sessions .block.width-540{background-image:url(../images/backgrounds/bg-block-3.png)}
+#devise-sessions .block.width-540 form{width:450px}
+#devise-sessions form .actions input{background-position:-122px -53px}
+
+form .field.checkbox{text-align:right}
+form .field.checkbox label,
+form .field.checkbox input{width:auto; display:inline; float:none}
+
+footer.main{height:100px; margin-top:200px}
+#kosmyka{width:157px; height:38px; display:block; margin:0 auto; background:url(../images/kosmyka.png) no-repeat  -7px 5px;
+-moz-transition:none; -webkit-transition:none; -o-transition:none; transition:none}
+#kosmyka:hover{background-position:-7px -45px}
+
+
 /* 
 ================================================== 
 BLOCKS
@@ -249,6 +266,8 @@ div.block h6.title{}
 .block.centered{float:none; margin:0 auto}
 .block-footer{width:100%; margin-top:10px; float:left; clear:left; border-top:1px solid #ABB9BA}
 .block-footer .link.last{float:right}
+
+#videos.show .block.width-540{background-image:url("../images/backgrounds/bg-block-4.png") }
 
 /* 
 ================================================== 
