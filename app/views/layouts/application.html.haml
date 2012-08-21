@@ -11,12 +11,13 @@
     = yield(:head)
 
   %body{:id => bodyid, :class => bodyclass}
-    %header.main
-      .container
-        %h1#logo
-          = link_to 'Tia Botas - Samsung SmartTV', videos_path
-    = render 'layouts/menu' 
-        
+    - if current_user
+      %header.main
+        .container
+          %h1#logo
+            = link_to 'Tia Botas - Samsung SmartTV', videos_path
+      = render 'layouts/menu'
+
     #container
       %p#notice
       - flash.each do |name, msg|
@@ -26,7 +27,7 @@
         %h1= yield(:title)
 
       = yield
-      
+
     %footer.main.container
       = link_to '', 'http://www.kosmyka.com', :id => 'kosmyka', :target => '_blank'
 
