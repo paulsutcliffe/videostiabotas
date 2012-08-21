@@ -12,11 +12,13 @@
           %ul
             %li.titulo= link_to video.title, video
             %li.archivo= video.movie_file_name
-            %li.categoria= video.category_id
-            %li.personaje= video.character_id
+            %li.categoria= @categories[video.category_id].name
+            %li.personaje= @characters[video.character_id - 1].name
             %li.links
               = link_to 'Editar', edit_video_path(video), :class => 'btn edit'
               = link_to 'Eliminar', video, :confirm => '¿Estás seguro?', :method => :delete, :class => 'btn destroy'
       .table-footer
         = link_to 'Nuevo Video', new_video_path, :class => 'link'
+        |
+        = link_to 'XML', { :action => 'index', :format => :xml }, :class => 'link'
         = will_paginate @videos
