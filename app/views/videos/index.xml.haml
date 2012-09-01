@@ -1,4 +1,7 @@
 !!! XML
 %videos
   - @videos.each do |video|
-    %video{:id => video.id, :title => video.title, :link => video.movie_file_name}
+    %video{:id => video.id}
+      %title= video.title
+      %link= video.movie_file_name
+      %description= video.description

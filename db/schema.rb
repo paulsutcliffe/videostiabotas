@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120813091041) do
+ActiveRecord::Schema.define(:version => 20120901002221) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -63,6 +63,7 @@ ActiveRecord::Schema.define(:version => 20120813091041) do
     t.string   "movie_content_type"
     t.integer  "movie_file_size"
     t.datetime "movie_updated_at"
+    t.text     "description"
   end
 
   add_index "videos", ["slug"], :name => "index_videos_on_slug", :unique => true

@@ -18,5 +18,8 @@
   .field
     = f.label :character_id, "Personaje"
     = f.select(:character_id, @characters.collect {|p| [p.name, p.id]})
+  .field
+    = f.label :movie, "Descripción"
+    = f.text_area :description
   .actions
     = f.submit 'Guardar'
