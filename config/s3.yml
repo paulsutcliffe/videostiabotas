@@ -1,12 +1,12 @@
 development:
-  bucket: bucket-dev
-  access_key_id: xxx
-  secret_access_key: xxx
+  bucket: samsung-dev
+  access_key_id: AKIAICFHBCFDDRL2PPBQ
+  secret_access_key: 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
 test:
-  bucket: bucket-test
-  access_key_id: xxx
-  secret_access_key: xxx
+  bucket: samsung-test
+  access_key_id: AKIAICFHBCFDDRL2PPBQ
+  secret_access_key: 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
 production:
-  bucket: bucket-pro
-  access_key_id: xxx
-  secret_access_key: xxx
+  bucket: samsung-pro
+  access_key_id: AKIAICFHBCFDDRL2PPBQ
+  secret_access_key: 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
