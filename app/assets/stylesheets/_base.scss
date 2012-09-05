@@ -182,7 +182,7 @@ nav.main{margin-bottom:170px}
 a.link,
 form label,
 .block.width-540 .inner p{font-size:0.75em; line-height:1.2em}
-
+form label{margin-top:8px}
 
 /* 
 ================================================== 
@@ -223,11 +223,12 @@ form .field,
 form .actions{width:100%; float:left; clear:left}
 form .actions{margin-bottom:0}
 form .field input{width:300px; float:left; border:0; padding:13px 6px; background:url(../images/backgrounds/btn-global.png) no-repeat -4px -104px }
-form .field select{width:320px; float:left; border:0; padding:6px 6px; background:url(../images/backgrounds/btn-global.png) no-repeat -4px -104px }
+form .field select,
+form .field textarea{width:320px; float:left; border:0; padding:6px 6px; background:url(../images/backgrounds/btn-global.png) no-repeat -4px -104px }
 form .field select option{background:white}
 form .actions input{width:117px; height:40px; text-indent:-99999px; border:0; float:right; 
 background:url(../images/backgrounds/btn-global.png) no-repeat -1px -53px}
-
+form .field textarea{background-position:-4px -154px; height:180px}
 
 
 #flash_notice{width:520px;  margin:0 auto; padding:15px; font-size:1.5em; background:white; margin-bottom:10px;
@@ -267,6 +268,7 @@ div.block h6.title{}
 .block-footer{width:100%; margin-top:10px; float:left; clear:left; border-top:1px solid #ABB9BA}
 .block-footer .link.last{float:right}
 
+#videos.edit .block.width-540{height:auto; padding:20px 20px 100px; background:url(../images/backgrounds/bg-block-2-videos-edit.png) no-repeat 0 15px; overflow:hidden}
 #videos.show .block.width-540{background-image:url("../images/backgrounds/bg-block-4.png") }
 
 /* 

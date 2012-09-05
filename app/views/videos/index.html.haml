@@ -11,8 +11,8 @@
         - @videos.each do |video|
           %ul
             %li.titulo= link_to video.title, video
-            %li.archivo= video.movie_file_name
-            %li.categoria= @categories[video.category_id].name
+            %li.archivo= truncate(video.movie_file_name, :length => 12 )
+            %li.categoria= truncate(@categories[video.category_id].name, :length => 20 )
             %li.personaje= @characters[video.character_id - 1].name
             %li.links
               = link_to 'Editar', edit_video_path(video), :class => 'btn edit'
