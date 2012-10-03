@@ -1,14 +1,14 @@
 require "bundler/capistrano"
 
-set :user, "dreamhostuser"
-set :domain, "dreamhostserver.dreamhost.com"
-set :project, "projectname"
-set :application, "applicationname"
+set :user, "railstiabotasvideos"
+set :domain, "ramin.dreamhost.com"
+set :project, "videostiabotas"
+set :application, "videostiabotas"
 set :applicationdir, "/home/#{user}/#{application}"  # The standard Dreamhost setup
-set :repository,  "git@github.com:githubusername/githubrepository.git"
+set :repository,  "git@github.com:paulsutcliffe/videostiabotas.git"
 default_run_options[:pty] = true
 
-default_environment['PATH']='/usr/lib/ruby/gems/1.8/bin:/home/#{user}/.gems/bin:/usr/local/bin:/usr/bin:/bin'
+default_environment['PATH']='/usr/lib/ruby/gems/1.8/bin:/home/railsvideostiabotas/.gems/bin:/usr/local/bin:/usr/bin:/bin'
 default_environment['GEM_PATH'] = File.expand_path('~/.gems') + ':' + '/usr/lib/ruby/gems/1.8'
 
 ssh_options[:forward_agent] = true

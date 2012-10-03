@@ -8,6 +8,9 @@
     = stylesheet_link_tag "/stylesheets/base.css", "/stylesheets/skeleton.css", "/stylesheets/screen.css", "http://fonts.googleapis.com/css?family=Fredoka+One"
     = javascript_include_tag :defaults
     = csrf_meta_tag
+    = favicon_link_tag "/favicon.png"
+    == <meta name="description" content="App for manage the Tia Botas videos for the Samsung SmartTV App." />
+    == <meta name="googlebot" content="noindex,nofollow" />
     = yield(:head)
 
   %body{:id => bodyid, :class => bodyclass}

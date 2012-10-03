@@ -34,8 +34,9 @@ production:
   reconnect: false
   database: videostiabotas_production
   pool: 5
-  username: root
-  password:
+  host: mysql.tiabotas.com
+  username: tiabotasdb
+  password: chimpance99
 
 cucumber:
   <<: *test
