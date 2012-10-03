@@ -1,6 +1,6 @@
 require "bundler/capistrano"
 
-set :user, "railstiabotasvideos"
+set :user, "railsvideostiabotas"
 set :domain, "ramin.dreamhost.com"
 set :project, "videostiabotas"
 set :application, "videostiabotas"
