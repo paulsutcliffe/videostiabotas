@@ -841,7 +841,7 @@ table {
 /* line 259, ../../app/assets/stylesheets/_base.scss */
 .block.width-540 {
   width: 620px;
-  height: 530px;
+  height: 780px;
   padding: 20px;
   background: url(../images/backgrounds/bg-block-2.png) no-repeat 0 10px;
   -moz-box-sizing: border-box;
@@ -892,8 +892,8 @@ table {
 /* line 271, ../../app/assets/stylesheets/_base.scss */
 #videos.edit .block.width-540 {
   height: auto;
-  padding: 20px 20px 80px;
-  background: url(../images/backgrounds/bg-block-2-videos-edit.png) no-repeat 0 -25%;
+  padding: 20px 20px 100px;
+  background: url(../images/backgrounds/bg-block-2-videos-edit.png) no-repeat 0 15px;
   overflow: hidden;
 }
 
