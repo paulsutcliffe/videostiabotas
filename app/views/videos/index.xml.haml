@@ -3,5 +3,7 @@
   - @videos.each do |video|
     %video{:id => video.id}
       %title= video.title
-      %link= video.movie_file_name
+      %link= 'https://s3.amazonaws.com/samsung-pro/movies/' + video.id.to_s + '/' + video.movie_file_name
       %description= video.description
+      %category= video.category.name
+      %character= video.character.name
