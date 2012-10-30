@@ -1,6 +1,6 @@
 #encoding: utf-8
 class VideosController < InheritedResources::Base
-  before_filter :authenticate_user!
+  before_filter :authenticate_user!, :except => [ :index ]
   respond_to :html, :xml
 
   def index

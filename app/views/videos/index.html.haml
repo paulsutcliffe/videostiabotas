@@ -15,10 +15,14 @@
             %li.categoria= truncate(video.category.name, :length => 20 )
             %li.personaje= video.character.name
             %li.links
-              = link_to 'Editar', edit_video_path(video), :class => 'btn edit'
-              = link_to 'Eliminar', video, :confirm => '¿Estás seguro?', :method => :delete, :class => 'btn destroy'
+              - if current_user
+                = link_to 'Editar', edit_video_path(video), :class => 'btn edit'
+                = link_to 'Eliminar', video, :confirm => '¿Estás seguro?', :method => :delete, :class => 'btn destroy'
       .table-footer
-        = link_to 'Nuevo Video', new_video_path, :class => 'link'
+        - if current_user
+          = link_to 'Nuevo Video', new_video_path, :class => 'link'
+        - else
+          = link_to 'Iniciar sesión', new_user_session_path, :class => 'link'
         |
         = link_to 'XML', { :action => 'index', :format => :xml }, :class => 'link'
         = will_paginate @videos
