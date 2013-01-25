@@ -18,6 +18,8 @@
               - if current_user
                 = link_to 'Editar', edit_video_path(video), :class => 'btn edit'
                 = link_to 'Eliminar', video, :confirm => '¿Estás seguro?', :method => :delete, :class => 'btn destroy'
+              - else
+                = link_to 'Ver', video, :class => 'btn view'
       .table-footer
         - if current_user
           = link_to 'Nuevo Video', new_video_path, :class => 'link'
