@@ -4,8 +4,8 @@ class VideosController < InheritedResources::Base
   respond_to :html, :xml
 
   def index
-    @videos = Video.paginate(:page => params[:page], :per_page => 5)
-    @all_videos = Video.all
+    @videos = Video.order("created_at DESC").paginate(:page => params[:page], :per_page => 5)
+    @all_videos = Video.order("created_at DESC").all
     @categories = Category.all
     @characters = Character.all
   end
