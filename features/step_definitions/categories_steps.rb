@@ -3,7 +3,7 @@ Given /^I am a new authenticated user$/ do
    password = 'donalee'
    User.new(:email => email, :password => password, :password_confirmation => password).save!
 
-   visit '/'
+   visit '/users/sign_in'
    fill_in "E-mail", :with => email
    fill_in "Contraseña", :with => password
    click_button "Ingresar"

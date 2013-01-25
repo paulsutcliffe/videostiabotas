@@ -1,25 +1,9 @@
 #content.container
   .block.width-540.centered
-    %h6.title Video
+    %h6.title= @video.title
     .inner
       %p
-        Título:
-        = @video.title
-      %p
-        Video Link:
-        = @video.movie_file_name
-      %p
-        Categoría:
-        = @category
-      %p
-        Personaje:
-        = @character
-      %p
-        Descripcion:
-        = @video.description
+        = render :partial => "video", :locals => { :video_link => @video_link}
       .block-footer
         = link_to 'Editar', edit_video_path(@video), :class => 'link first'
         = link_to 'Regresar', videos_path, :class => 'link last'
-
-
-

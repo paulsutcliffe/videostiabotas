@@ -24,6 +24,7 @@ class VideosController < InheritedResources::Base
     @video = Video.find_by_id(params[:id])
     @category = Category.find_by_id(@video.category_id.to_i).name
     @character = Character.find_by_id(@video.character_id.to_i).name
+    @video_link = 'https://s3.amazonaws.com/samsung-pro/movies/' + @video.id.to_s + '/' + @video.movie_file_name
   end
 
   def create

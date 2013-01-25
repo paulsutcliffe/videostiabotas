@@ -9,7 +9,7 @@ es:
     - vie
     - sáb
     abbr_month_names:
-    - 
+    -
     - ene
     - feb
     - mar
@@ -35,7 +35,7 @@ es:
       long: ! '%A, %d de %B del %Y'
       short: ! '%d de %b'
     month_names:
-    - 
+    -
     - enero
     - febrero
     - marzo
@@ -179,3 +179,8 @@ es:
   activerecord:
     errors:
       <<: *errors
+  will_paginate:
+    previous_label: "&#8592; Anterior"
+    next_label: "Siguiente &#8594;"
+    page_gap: "&hellip;"
+
