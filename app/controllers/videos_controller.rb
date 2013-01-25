@@ -5,6 +5,7 @@ class VideosController < InheritedResources::Base
 
   def index
     @videos = Video.paginate(:page => params[:page], :per_page => 5)
+    @all_videos = Video.all
     @categories = Category.all
     @characters = Character.all
   end

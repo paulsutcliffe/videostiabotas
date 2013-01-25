@@ -1,6 +1,6 @@
 !!! XML
 %videos
-  - @videos.each do |video|
+  - @all_videos.each do |video|
     %video{:id => video.id}
       %title= video.title
       %link= 'https://s3.amazonaws.com/samsung-pro/movies/' + video.id.to_s + '/' + video.movie_file_name
